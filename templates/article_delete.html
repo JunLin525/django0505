@@ -1,0 +1,12 @@
+<!-- templates/article_delete.html -->
+{% extends "base.html" %}
+
+{% block title %}刪除頁面{% endblock %}
+
+{% block content %}
+<h1>刪除</h1>
+<form action="" method="post">{% csrf_token %} 
+    <p> 你確定你想刪除 {{ article.title }}嗎</p>
+    <button class="btn btn-danger ml-2" type ="submit">確定</button>
+</form>
+{% endblock content %}

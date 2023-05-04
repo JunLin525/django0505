@@ -1,0 +1,47 @@
+<!--basic.html-->
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}基礎概念{% endblock %}
+{% block content %}
+<div>
+    大部分的網路框架都會使用MVC
+    <ol>
+        <li>Model: Manages data and core business logic</li>
+        <li>View: Renders data from the model in a particular format</li>
+        <li>Controller: Accepts user input and performs application-specific logic</li>
+    </ol>
+    <h4>Django網路框架主要透過下列方式來接收訊息：
+        <emHTTP Request -> URL -> View -> Model and Template -> HTTP Response
+        </em>
+        對於Django MVC就是
+        <ol>
+            <li>Model: Manages data and core business logic
+            </li>
+            <li>
+                View: Describes which data is sent to the user but not its presentation
+            </li>
+            <li>
+                Template: Presents the data as HTML with optional CSS, JavaScript, and Static Assets
+            </li>
+            <li>
+                URL Configuration: Regular-expression components configured to a View
+            </li>
+        </ol>
+    </h4>
+</div>
+
+
+<h3>new app</h3>
+<h4><em>They have two way to import new app inside settings</em>
+    <ol>
+        <li>apps</li>
+        <li>pages.apps.PagesConfig</li>
+    </ol>
+</h4>
+
+<h3>Function-Based Views(FBVS) Class Based Views(CBVS) (generic class Based Views)GCBVs</h3>
+ DRY (Don’t-Repeat-Yourself),
+
+
+ 
+{% endblock %}

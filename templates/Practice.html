@@ -1,0 +1,16 @@
+<!--basic.html-->
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}資料庫留言{% endblock %}
+{% block content %}
+目前將資料庫的留言PO出來給大家參考，之後再來設定FORMS讓人可以填寫。
+<hr>
+<ul>
+    {% for P in Practices %}
+   
+    <li>{{ P.name }}的貼文是<br>{{ P.text }}</li>
+    <hr>
+    {% endfor %}
+</ul>
+ 
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Article List{% endblock title %}
+
+
+{% block  content %} 
+
+<!--article的全部顯現-->
+{% for article in article_list %}
+
+<div class ="card">
+    <div class="card-header">
+        <span class="font-weight-bold"><a href="{% url 'article_detail' article.pk  %}">{{ article.title }}</a></span> &middot;
+        <span class="text-muted">by {{ article.author }} 
+        | 貼文時間  {{ article.date }}</span>
+    </div>
+    <div class="card-body">
+        {{ article.body }}
+    </div>
+    <div class=""card-footer text-center text-muted>
+        <a href="{% url 'article_edit' article.pk %}">編輯</a> | <a href ="{% url 'article_delete' article.pk %}">刪除</a>
+    </div>
+    <!--comment-->
+    <div class="card-footer">
+        {% for comment in article.comment_set.all %}
+        <p>
+            <span class="font-weight-bold">
+                {{ comment.author }} &middot;
+            </span>
+            {{ comment }}
+        </p>
+        {% endfor %}
+    </div>
+    <!--comment end-->
+</div>
+<br />
+{% endfor %}
+{% endblock content %}
+    

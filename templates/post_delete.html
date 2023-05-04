@@ -1,0 +1,10 @@
+<!-- templates/post_delete.html -->
+{% extends "base.html" %}
+{% block title %}刪除貼文{% endblock %}
+{% block content %}
+<h1>是否刪除貼文</h1>
+<form action="" method="post">{% csrf_token %}
+  <p>是否確認要刪除由{{ post.author }}張貼的 {{ post.title }}?</p>
+  <input type="submit" value="確認">
+</form>
+{% endblock content %}

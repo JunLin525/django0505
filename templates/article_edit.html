@@ -1,0 +1,17 @@
+<!--templates/article_edit.html-->
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}文章編輯{% endblock title %}
+{% block content %} 
+
+<h1>編輯</h1>
+<form action="" method="post">{% csrf_token %}
+{{ form|crispy }}
+    <button class="btn btn-info ml-2" type="submit">更新</button>
+    
+</form>
+
+
+
+
+{% endblock content %}

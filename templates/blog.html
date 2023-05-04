@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% block title %} 帳號留言板 {% endblock %}
+{% block content %}
+可以點擊下方增加貼文。<br/>
+<p align="left">
+    <a href ="/Blog_create/">張貼新貼文</a></p>
+<hr>
+{% for post in post_list %}
+<div class="post-entry">
+    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+    <p><em>----這是 {{ post.author }}的貼文-----</em></p>
+</div>
+{% endfor %}
+{% endblock %}

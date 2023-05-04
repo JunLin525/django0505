@@ -1,0 +1,25 @@
+<!--hello.html-->
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %}測試網頁{% endblock %}
+{% block content %}
+    <div class='container'>
+        <div class = 'panel-heading'>
+    
+        <h2>這是一個練習Django的網站頁面</h2>
+        <hr>
+        希望可以透過架設這個網站學到一些
+        <ul>
+            <li>基礎的Django概念</li>
+            <li>基礎的HTML概念</li>
+            <li>MTV的概念</li>
+            <li>基礎單元測試</li>
+        </ul>
+        
+        若要聯繫可以透過下列方式
+        <a href='mailto:junlin5525@gmail.com'>我的信箱</a>
+        <a href='tel:0926535597'>我的電話</a>
+        <a href='/'>返回首頁</a>
+        </div>
+    </div>
+{% endblock %}
